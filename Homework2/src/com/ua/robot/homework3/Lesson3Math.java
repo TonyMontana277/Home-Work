@@ -8,6 +8,7 @@ public class Lesson3Math {
 		double b = Math.random(); 
 		a++;
 		b++;
+		
 		double sum = a + b;// count sum 
 		double minus = a - b;// count subtraction
 		double multiply = a * b;// count multiplication
