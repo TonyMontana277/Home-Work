@@ -5,7 +5,8 @@ public class Lesson3Math {
 	public static void main(String[] args) {
 		// generate numbers
 		double a = Math.random();
-		double b = Math.random(); 
+		double b = Math.random();
+		
 		a++;
 		b++;
 		double sum = a + b;// count sum 
