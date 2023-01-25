@@ -12,7 +12,13 @@ public class MaxNumber {
 		Scanner sc2 = new Scanner(System.in);
 		System.out.print("Enter second number: ");
 		int number2 = sc2.nextInt();
-		System.out.print("Max number is: " + Math.max(number1, number2));
+		if(number1 > number2) {
+			System.out.print("Max number is: " + number1 );
+		}
+		else {
+			System.out.print("Max number is: " + number2);
+		}
+		
 	}
 
 }

@@ -12,7 +12,12 @@ public class MinNumber {
 				Scanner sc2 = new Scanner(System.in);
 				System.out.print("Enter second number: ");
 				int number2 = sc2.nextInt();
-				System.out.print("Min number is: " + Math.min(number1, number2));
+				if(number1 > number2) {
+					System.out.print("Min number is: " + number2 );
+				}
+				else {
+					System.out.print("Min number is: " + number1 );
+				}
 
 	}
 
