@@ -20,8 +20,8 @@ public class Main {
 		}
 	}
 	
-	static void printSymbol(int HowMuchTimes, String symbol) {
-		for (int i = 0; i < HowMuchTimes; i++ ) {
+	static void printSymbol(int howMuchTimes, String symbol) {
+		for (int i = 0; i < howMuchTimes; i++ ) {
 			System.out.print(symbol);
 		}
 	}
