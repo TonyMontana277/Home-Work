@@ -1,28 +1,69 @@
 package com.ua.robot.homework8;
 
-import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
-
-	public static void main(String[] args) {
-		int[] marks = new int [10];
-		for (int i = 0; i < marks.length; i++) {
-			marks[i] = ((int) (Math.random()*25));
+		
+		public static void main(String[] args) {
+			int length = 10;
+			int[] marks = new int[length];
+			fillArrayWithRandomNumbers(marks, 30);
+			printArray(marks);
+			System.out.print("\nMax value is: " + maxValueArray(marks));
+			System.out.print("\nMin value is: " + minValueArray(marks));
+			System.out.print("\nSum value is: " + sumArray(marks));
+			System.out.print("\nAverage value is: " + averageArray(marks));
 		}
-		int sum = 0;
-		for(int i = 0; i < marks.length; i++) {
-			sum += marks[i];
+		
+		static void fillArrayWithRandomNumbers(int[] arr, int maxValue) {
+			Random random = new Random();
+			for(int i = 0; i < arr.length; i++){
+				arr[i] = random.nextInt(maxValue);
+				}
+			}
+		
+		static void printArray(int[] arr) {
+			for(int i = 0; i < arr.length; i++) {
+				System.out.print(arr[i] + " ");
+			}
 		}
 		
-		System.out.println("Array:\t" + Arrays.toString(marks));
-		Arrays.sort(marks);
-		System.out.println("\nMin number is: " + marks[0]);
-		System.out.println("\nMax number is: " + marks[9]);
-		System.out.println("\nAverange number is: " + (double) sum/10);
-		System.out.println("\nSum numbers is: " + sum);
+		static int maxValueArray(int[] arr) {
+			int max = arr[0];
+			for(int i = 0; i < arr.length; i++) {
+				if(arr[i] > max) {
+					max = arr[i];
+				}
+			}
+			return max;	
+			}
+	
+		static int minValueArray(int[] arr) {
+			int min = arr[0];
+			for(int i = 0; i < arr.length; i++) {
+				if(arr[i] < min) {
+					min = arr[i];
+				}
+			}
+			return min;	
+			}
 		
+		static int sumArray(int[] arr) {
+			int sum = 0;
+			for(int i = 0; i < arr.length; i++) {
+				sum += arr[i];
+			}
+			return sum;
+		}
 		
-
+		static double averageArray(int[] arr) {
+			double average = 0;
+			int sum = 0;
+			for(int i = 0; i < arr.length; i++) {
+				sum += arr[i];
+			}
+			average = (double) sum / arr.length;
+			return average;
+		}
+		
 	}
-
-}
